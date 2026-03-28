@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fef9f0, #f5e8d0);
+    min-height: 100vh;
+}
+
+/* ========== DESKTOP NAVBAR ========== */
+.navbar-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #7a4a1f, #4a2a0f);
+    padding: 12px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #f5e8d0;
+}
+
+.nav-title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 8px 18px;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.search-icon {
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 8px;
+    transition: 0.2s;
+}
+
+.search-icon:hover {
+    transform: scale(1.1);
+}
+
+/* ========== MOBILE NAVBAR ========== */
+.navbar-mobile {
+    display: none;
+    background: linear-gradient(135deg, #7a4a1f, #4a2a0f);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 26px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+}
+
+.mobile-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-small {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mobile-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.mobile-search {
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu.active {
+    max-height: 150px;
+}
+
+.mobile-nav-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .navbar-desktop {
+        display: none;
+    }
+    .navbar-mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar-mobile {
+        display: none;
+    }
+}
+
+/* ========== HERO SECTION (DIPERBAIKI) ========== */
+header {
+    position: relative;
+    text-align: center;
+    color: white;
+    min-height: 500px;
+    height: 70vh;
+    max-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    backdrop-filter: blur(2px);
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+/* ========== WELCOME SECTION ========== */
+.welcome {
+    max-width: 1000px;
+    margin: 50px auto 40px;
+    text-align: center;
+    padding: 35px 25px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.welcome h2 {
+    color: #7a4a1f;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    color: #4a2a0f;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ========== ZONA GRID ========== */
+.zona {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+.zona h2 {
+    text-align: center;
+    color: #4a2a0f;
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+}
+
+.zona-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.zona-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.zona-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.zona-card i {
+    font-size: 2.8rem;
+    color: #7a4a1f;
+    margin-bottom: 18px;
+}
+
+.zona-card h3 {
+    color: #4a2a0f;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.zona-card p {
+    color: #6b5a4a;
+    margin-bottom: 20px;
+}
+
+.zona-card button {
+    background: #7a4a1f;
+    color: white;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.zona-card button:hover {
+    background: #4a2a0f;
+    transform: scale(1.02);
+}
+
+.zona-card.interaktif i {
+    color: #b87333;
+}
+
+.zona-card.interaktif button {
+    background: #b87333;
+}
+
+.zona-card.interaktif button:hover {
+    background: #7a4a1f;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #2d1a0a;
+    color: #b8a88c;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    header {
+        min-height: 350px;
+        height: 50vh;
+    }
+
+    .hero-content h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero-content p {
+        font-size: 0.85rem;
+    }
+
+    .welcome {
+        margin: 30px 15px;
+        padding: 25px 18px;
+    }
+
+    .welcome h2 {
+        font-size: 1.4rem;
+    }
+
+    .zona h2 {
+        font-size: 1.4rem;
+    }
+
+    .zona-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        min-height: 450px;
+        height: 60vh;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Virtual Kerajaan Banten</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========== DESKTOP NAVBAR ========== -->
+    <nav class="navbar-desktop">
+        <div class="nav-left">
+            <img src="src/logo.png" alt="Logo" class="logo">
+            <span class="nav-title">Museum Banten</span>
+        </div>
+        <div class="nav-right">
+            <button class="nav-btn" onclick="location.href='pages/index7.html'">Sumber</button>
+            <button class="nav-btn" onclick="location.href='pages/index8.html'">Koleksi</button>
+            <i class="fas fa-search search-icon" onclick="alert('Fitur pencarian akan segera hadir')"></i>
+        </div>
+    </nav>
+
+    <!-- ========== MOBILE NAVBAR ========== -->
+    <div class="navbar-mobile">
+        <div class="mobile-header">
+            <div class="menu-toggle" onclick="toggleMobileMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="mobile-logo">
+                <img src="src/logo.png" alt="Logo" class="logo-small">
+                <span class="mobile-title">Museum Banten</span>
+            </div>
+            <i class="fas fa-search mobile-search" onclick="alert('Fitur pencarian akan segera hadir')"></i>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="mobile-nav-btn" onclick="location.href='pages/sumber.html'">Sumber</button>
+            <button class="mobile-nav-btn" onclick="location.href='pages/koleksi.html'">Koleksi</button>
+        </div>
+    </div>
+
+    <!-- ========== HERO SECTION ========== -->
+    <header>
+        <div class="hero-bg">
+            <img src="src/MAB.jpeg" alt="Masjid Agung Banten">
+        </div>
+        <div class="hero-content">
+            <h1>Museum Virtual<br>Kerajaan Banten</h1>
+            <p>Menjelajahi Kejayaan Islam di Nusantara</p>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main>
+        <section class="welcome">
+            <h2>Selamat Datang</h2>
+            <p>Museum ini menyajikan sejarah lengkap Kerajaan Banten—dari awal berdiri, masa kejayaan, hingga keruntuhan. Jelajahi 5 zona pameran dan area interaktif untuk memahami warisan budaya Banten.</p>
+        </section>
+
+        <section class="zona">
+            <h2>Zona Pameran</h2>
+            <div class="zona-grid">
+                <div class="zona-card">
+                    <i class="fas fa-flag-checkered"></i>
+                    <h3>Zona 1</h3>
+                    <p>Sejarah Awal & Pendiri</p>
+                    <button onclick="location.href='pages/index1.html'">Kunjungi</button>
+                </div>
+                <div class="zona-card">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Zona 2</h3>
+                    <p>Sistem Pemerintahan & Wali Songo</p>
+                    <button onclick="location.href='pages/index2.html'">Kunjungi</button>
+                </div>
+                <div class="zona-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Zona 3</h3>
+                    <p>Ekonomi & Perdagangan</p>
+                    <button onclick="location.href='pages/index3.html'">Kunjungi</button>
+                </div>
+                <div class="zona-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Zona 4</h3>
+                    <p>Sosial & Budaya</p>
+                    <button onclick="location.href='pages/index4.html'">Kunjungi</button>
+                </div>
+                <div class="zona-card">
+                    <i class="fas fa-landmark"></i>
+                    <h3>Zona 5</h3>
+                    <p>Peninggalan & Kolonial</p>
+                    <button onclick="location.href='pages/index5.html'">Kunjungi</button>
+                </div>
+                <div class="zona-card interaktif">
+                    <i class="fas fa-tv"></i>
+                    <h3>Zona Interaktif</h3>
+                    <p>Ruang Audio Visual & Kuis</p>
+                    <button onclick="location.href='pages/index6.html'">Kunjungi</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <p>© 2025 Kelompok 6 | Museum Virtual Kerajaan Banten | Kelas X.8</p>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

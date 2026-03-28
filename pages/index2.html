@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zona 2 - Museum Banten</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fef9f0 0%, #f5e8d0 100%);
+      min-height: 100vh;
+      padding: 30px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .zona-header {
+      background: linear-gradient(135deg, #7a4a1f 0%, #4a2a0f 100%);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .zona-header h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .zona-header p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .zona-content {
+      padding: 30px;
+    }
+
+    .card {
+      background: #fffaf2;
+      border-radius: 16px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      border-left: 5px solid #7a4a1f;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h2 {
+      color: #7a4a1f;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card p {
+      color: #4a2a0f;
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .card ul {
+      margin-left: 20px;
+      color: #4a2a0f;
+      line-height: 1.7;
+    }
+
+    .card li {
+      margin-bottom: 8px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .info-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      border: 1px solid #f0e0c0;
+    }
+
+    .info-card h3 {
+      color: #7a4a1f;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .info-card p {
+      font-size: 0.9rem;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      gap: 15px;
+    }
+
+    .btn {
+      background: #7a4a1f;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 40px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #4a2a0f;
+      transform: translateY(-2px);
+    }
+
+    .btn-back {
+      background: #6c757d;
+    }
+
+    .btn-back:hover {
+      background: #495057;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+      .zona-header {
+        padding: 20px;
+      }
+      .zona-header h1 {
+        font-size: 1.5rem;
+      }
+      .zona-content {
+        padding: 20px;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .nav-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="zona-header">
+      <h1>Zona 2: Sistem Pemerintahan & Wali Songo</h1>
+      <p>Struktur kekuasaan dan peran Walisongo dalam Kesultanan Banten</p>
+    </div>
+
+    <div class="zona-content">
+      <!-- Sistem Pemerintahan -->
+      <div class="card">
+        <h2><i>🏛️</i> Sistem Pemerintahan</h2>
+        <p>Kesultanan Banten menerapkan sistem pemerintahan kerajaan Islam dengan Sultan sebagai pemimpin tertinggi yang memegang kekuasaan politik sekaligus agama. Struktur pemerintahan terdiri dari:</p>
+        <ul>
+          <li><strong>Sultan</strong> - Pemimpin tertinggi, kepala negara dan agama</li>
+          <li><strong>Pepatih Dalem</strong> - Perdana menteri yang membantu sultan</li>
+          <li><strong>Mentri</strong> - Para pejabat yang mengepalai berbagai bidang</li>
+          <li><strong>Bupati</strong> - Kepala daerah di wilayah kekuasaan Banten</li>
+        </ul>
+        <p>Hukum yang berlaku adalah perpaduan antara hukum Islam (syariat) dan hukum adat setempat. Sultan memiliki kewenangan mutlak dalam pemerintahan dan didukung oleh para ulama.</p>
+      </div>
+
+      <!-- Sistem Kekuasaan & Wilayah -->
+      <div class="card">
+        <h2><i>🗺️</i> Wilayah Kekuasaan</h2>
+        <p>Pada masa kejayaannya, Kesultanan Banten menguasai wilayah yang luas:</p>
+        <ul>
+          <li><strong>Jawa Barat</strong> - Banten, Sunda Kelapa, Cirebon (pengaruh)</li>
+          <li><strong>Sumatera Selatan</strong> - Lampung (penghasil lada utama)</li>
+          <li><strong>Kalimantan Barat</strong> - Pengaruh perdagangan hingga Sukadana</li>
+        </ul>
+      </div>
+
+      <!-- Peran Wali Songo -->
+      <div class="card">
+        <h2><i>🕌</i> Peran Wali Songo di Banten</h2>
+        <div class="grid-2">
+          <div class="info-card">
+            <h3>Sunan Gunung Jati</h3>
+            <p>Wali Songo yang berperan besar dalam pendirian Kesultanan Banten. Beliau adalah penggerak utama penyebaran Islam dan pendamping putranya, Maulana Hasanuddin, dalam membangun Banten.</p>
+          </div>
+          <div class="info-card">
+            <h3>Pengaruh Wali Songo</h3>
+            <p>Pendekatan dakwah Wali Songo yang akomodatif terhadap budaya lokal mempengaruhi sistem pemerintahan Banten. Sultan dianggap sebagai pemimpin spiritual sekaligus politik, mencerminkan ajaran Islam yang disebarkan para wali.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Penyebaran Islam -->
+      <div class="card">
+        <h2><i>📿</i> Penyebaran Islam di Banten</h2>
+        <p>Islam masuk ke Banten melalui para pedagang dan ulama. Sunan Gunung Jati dan putranya Maulana Hasanuddin menjadikan Banten sebagai pusat dakwah Islam di Jawa Barat. Masjid Agung Banten dibangun sebagai pusat ibadah dan pendidikan Islam. Kesultanan Banten menjadi benteng penyebaran Islam hingga ke wilayah Lampung dan Kalimantan.</p>
+      </div>
+
+      <!-- Fakta Penting -->
+      <div class="card">
+        <h2><i>⭐</i> Fakta Penting</h2>
+        <ul>
+          <li>Banten didirikan oleh putra Sunan Gunung Jati (Wali Songo)</li>
+          <li>Sistem pemerintahan Islam menjadi fondasi Kesultanan Banten</li>
+          <li>Masjid Agung Banten dibangun sebagai pusat dakwah dan pendidikan Islam</li>
+          <li>Hubungan erat antara kesultanan dan ulama menjadi ciri khas pemerintahan Banten</li>
+        </ul>
+      </div>
+
+      <!-- Tombol Navigasi -->
+      <div class="nav-buttons">
+        <button class="btn btn-back" onclick="window.location.href='index1.html'">← Kembali ke Zona 1</button>
+        <button class="btn" onclick="window.location.href='index3.html'">Lanjut ke Zona 3 →</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

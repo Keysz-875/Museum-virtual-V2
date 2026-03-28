@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona 1 - Museum Banten</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #fef9f0, #f5e8d0);
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .zona-header {
+            background: linear-gradient(135deg, #7a4a1f, #4a2a0f);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .zona-header h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .zona-header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .zona-content {
+            padding: 30px;
+        }
+
+        .card {
+            background: #fffaf2;
+            border-radius: 16px;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            border-left: 5px solid #7a4a1f;
+        }
+
+        .card h2 {
+            color: #7a4a1f;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card p,
+        .card ul {
+            color: #4a2a0f;
+            line-height: 1.7;
+        }
+
+        .card ul {
+            margin-left: 20px;
+        }
+
+        /* Grid 2 kolom untuk ID Card */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 15px;
+        }
+
+        /* ID Card untuk tokoh (format potrait 3:4) */
+        .id-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .id-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .id-card-img {
+            width: 100%;
+            background: #e0d0b8;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Rasio 3:4 untuk desktop (lebar 100%, tinggi 133.33%) */
+        .id-card-img {
+            aspect-ratio: 3 / 4;
+        }
+
+        .id-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+
+        .id-card-content {
+            padding: 15px;
+        }
+
+        .id-card-content h3 {
+            color: #7a4a1f;
+            margin-bottom: 5px;
+            font-size: 1.3rem;
+        }
+
+        .id-card-content p {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .id-card-content .role {
+            font-weight: bold;
+            color: #b87333;
+            margin-top: 8px;
+        }
+
+        /* Tombol Navigasi */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 15px;
+        }
+
+        .btn {
+            background: #7a4a1f;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #4a2a0f;
+            transform: translateY(-2px);
+        }
+
+        .btn-back {
+            background: #6c757d;
+        }
+
+        .btn-back:hover {
+            background: #495057;
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+            }
+
+            .zona-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .zona-content {
+                padding: 20px;
+            }
+
+            /* Mobile: rasio 4:5 agar lebih tinggi */
+            .id-card-img {
+                aspect-ratio: 4 / 5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="zona-header">
+            <h1>Zona 1: Sejarah Awal & Pendiri</h1>
+            <p>Asal-usul dan berdirinya Kesultanan Banten</p>
+        </div>
+
+        <div class="zona-content">
+            <!-- Latar Belakang -->
+            <div class="card">
+                <h2>📜 Latar Belakang</h2>
+                <p>Banten awalnya bagian dari Kerajaan Sunda. Wilayah ini berkembang menjadi kesultanan setelah masuknya Islam. Letaknya strategis di Selat Sunda menjadikan Banten pelabuhan penting sejak masa Hindu-Buddha.</p>
+            </div>
+
+            <!-- Tokoh Pendiri -->
+            <div class="card">
+                <h2>👑 Tokoh Pendiri</h2>
+                <div class="grid-2">
+                    <!-- Sunan Gunung Jati -->
+                    <div class="id-card">
+                        <div class="id-card-img">
+                            <img src="../src/SGJ.jpg" alt="Sunan Gunung Jati" onerror="this.src='https://via.placeholder.com/300x400?text=Sunan+Gunung+Jati'">
+                        </div>
+                        <div class="id-card-content">
+                            <h3>Syarif Hidayatullah</h3>
+                            <p>Sunan Gunung Jati</p>
+                            <p>Wali Songo, penggerak utama berdirinya Kesultanan Banten</p>
+                            <div class="role">Pendiri & Penyebar Islam</div>
+                        </div>
+                    </div>
+
+                    <!-- Sultan Maulana Hasanuddin -->
+                    <div class="id-card">
+                        <div class="id-card-img">
+                            <img src="../src/SMH.jpeg" alt="Sultan Maulana Hasanuddin" onerror="this.src='https://via.placeholder.com/300x400?text=Sultan+Maulana+Hasanuddin'">
+                        </div>
+                        <div class="id-card-content">
+                            <h3>Sultan Maulana Hasanuddin</h3>
+                            <p>Putra Sunan Gunung Jati</p>
+                            <p>Raja pertama Kesultanan Banten (1526)</p>
+                            <div class="role">Sultan Pertama</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proses Berdirinya -->
+            <div class="card">
+                <h2>🏛️ Proses Berdirinya</h2>
+                <p>Pada tahun 1526, Maulana Hasanuddin mendirikan Banten sebagai pusat dakwah Islam. Banten melepaskan diri dari Kerajaan Sunda dan berdiri sebagai kesultanan merdeka.</p>
+            </div>
+
+            <!-- Timeline Berdirinya -->
+            <div class="card">
+                <h2>⏱️ Timeline Berdirinya</h2>
+                <ul>
+                    <li><strong>1526</strong> - Maulana Hasanuddin mendirikan Banten</li>
+                    <li><strong>1527</strong> - Banten resmi berdiri sebagai kesultanan Islam</li>
+                    <li><strong>1552</strong> - Sunan Gunung Jati wafat</li>
+                </ul>
+            </div>
+
+            <!-- Perkembangan Awal -->
+            <div class="card">
+                <h2>📈 Perkembangan Awal</h2>
+                <p>Letak strategis di Selat Sunda membuat Banten cepat menjadi pusat perdagangan lada. Pedagang dari Arab, Persia, India, China, hingga Eropa datang ke Banten. Faktor pendukung: jatuhnya Malaka ke Portugis (1511) membuat pedagang Muslim beralih ke Banten.</p>
+            </div>
+
+            <!-- Fakta Penting -->
+            <div class="card">
+                <h2>⭐ Fakta Penting</h2>
+                <ul>
+                    <li>Banten didirikan oleh putra Sunan Gunung Jati (Wali Songo)</li>
+                    <li>Kerajaan Islam pertama di Jawa Barat</li>
+                    <li>Bandar lada terbesar di Asia Tenggara abad 16–17</li>
+                </ul>
+            </div>
+
+            <!-- Tombol Navigasi -->
+            <div class="nav-buttons">
+                <button class="btn btn-back" onclick="window.location.href='../index.html'">← Kembali ke Beranda</button>
+                <button class="btn" onclick="window.location.href='index2.html'">Lanjut ke Zona 2 →</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

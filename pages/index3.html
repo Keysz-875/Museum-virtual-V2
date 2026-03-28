@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zona 3 - Museum Banten</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fef9f0 0%, #f5e8d0 100%);
+      min-height: 100vh;
+      padding: 30px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .zona-header {
+      background: linear-gradient(135deg, #7a4a1f 0%, #4a2a0f 100%);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .zona-header h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .zona-header p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .zona-content {
+      padding: 30px;
+    }
+
+    .card {
+      background: #fffaf2;
+      border-radius: 16px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      border-left: 5px solid #7a4a1f;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h2 {
+      color: #7a4a1f;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card p {
+      color: #4a2a0f;
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .card ul {
+      margin-left: 20px;
+      color: #4a2a0f;
+      line-height: 1.7;
+    }
+
+    .card li {
+      margin-bottom: 8px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .info-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      border: 1px solid #f0e0c0;
+    }
+
+    .info-card h3 {
+      color: #7a4a1f;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .info-card p {
+      font-size: 0.9rem;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      gap: 15px;
+    }
+
+    .btn {
+      background: #7a4a1f;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 40px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #4a2a0f;
+      transform: translateY(-2px);
+    }
+
+    .btn-back {
+      background: #6c757d;
+    }
+
+    .btn-back:hover {
+      background: #495057;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+      .zona-header {
+        padding: 20px;
+      }
+      .zona-header h1 {
+        font-size: 1.5rem;
+      }
+      .zona-content {
+        padding: 20px;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .nav-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="zona-header">
+      <h1>Zona 3: Ekonomi & Perdagangan</h1>
+      <p>Kemakmuran Banten sebagai Bandar Lada Dunia</p>
+    </div>
+
+    <div class="zona-content">
+      <!-- Komoditas Utama -->
+      <div class="card">
+        <h2><i>🌾</i> Komoditas Utama</h2>
+        <ul>
+          <li><strong>Lada</strong> - Komoditas utama yang menjadi primadona perdagangan internasional. Banten menjadi pemasok lada terbesar di Asia Tenggara</li>
+          <li><strong>Beras</strong> - Hasil pertanian dari daerah pedalaman Banten</li>
+          <li><strong>Cengkeh</strong> - Didatangkan dari Maluku oleh pedagang Banten untuk diekspor ke luar Nusantara. Pada 1636, ekspor cengkeh mencapai 300.000 pon</li>
+          <li><strong>Lada hitam dan putih</strong> - Varietas lada yang sangat dicari pasar Eropa</li>
+        </ul>
+      </div>
+
+      <!-- Pelabuhan & Sarana Perdagangan -->
+      <div class="card">
+        <h2><i>⚓</i> Pelabuhan & Sarana Perdagangan</h2>
+        <ul>
+          <li><strong>Pelabuhan Karangantu</strong> - Pelabuhan utama Banten yang menjadi pusat perdagangan internasional</li>
+          <li><strong>Pasar Karangantu</strong> - Pasar besar di dekat pelabuhan dengan zona khusus berdasarkan jenis barang</li>
+          <li><strong>Gudang Logistik (Loji)</strong> - Kompleks pergudangan untuk menyimpan stok lada sebelum diekspor</li>
+          <li><strong>Mercusuar Masjid Agung</strong> - Menara yang berfungsi sebagai menara pengawas lalu lintas kapal</li>
+          <li><strong>Sistem Kanal</strong> - Menghubungkan keraton dengan pelabuhan untuk transportasi barang</li>
+        </ul>
+      </div>
+
+      <!-- Jalur Perdagangan -->
+      <div class="card">
+        <h2><i>🗺️</i> Jalur Perdagangan</h2>
+        <p>Letak Banten yang strategis di Selat Sunda menjadikannya persimpangan jalur perdagangan internasional:</p>
+        <ul>
+          <li><strong>Asia</strong> - Arab, Persia, India, China, Siam, Tonkin</li>
+          <li><strong>Eropa</strong> - Portugis, Inggris, Belanda (VOC), Denmark, Prancis</li>
+          <li><strong>Nusantara</strong> - Maluku (cengkeh), Lampung (lada), Kalimantan</li>
+        </ul>
+      </div>
+
+      <!-- Kehidupan Ekonomi Masyarakat -->
+      <div class="card">
+        <h2><i>👥</i> Kehidupan Ekonomi Masyarakat</h2>
+        <p>Kesultanan Banten menerapkan sistem pasar terbuka yang menarik pedagang dari berbagai bangsa. Sultan Ageng Tirtayasa (1651-1683) bahkan menjalin hubungan dagang langsung dengan Inggris dan Denmark untuk mematahkan monopoli Belanda. Sistem ini membuat Banten mengungguli Makassar dan Aceh sebagai bandar lada terbesar di Indonesia.</p>
+        <p>Kemajuan ekonomi juga didukung oleh sistem administrasi yang baik dengan jabatan <strong>Syahbandar</strong> yang mengatur izin berlabuh dan memungut pajak. Banten juga mencetak mata uang sendiri, yaitu <strong>Kasha</strong> (koin emas) dan <strong>Picis</strong> (koin tembaga/timah).</p>
+      </div>
+
+      <!-- Fakta Penting -->
+      <div class="card">
+        <h2><i>⭐</i> Fakta Penting</h2>
+        <ul>
+          <li>Banten disebut "bandar lada terbesar di Indonesia" pada masa Sultan Ageng Tirtayasa</li>
+          <li>Pelabuhan Banten menjadi alternatif setelah Malaka jatuh ke Portugis (1511)</li>
+          <li>Pedagang dari Inggris, Denmark, Prancis, dan Portugis pernah berdagang di Banten sebelum diusir VOC</li>
+          <li>Ekspor cengkeh Banten mencapai 300.000 pon pada 1636</li>
+        </ul>
+      </div>
+
+      <!-- Tombol Navigasi -->
+      <div class="nav-buttons">
+        <button class="btn btn-back" onclick="window.location.href='index2.html'">← Kembali ke Zona 2</button>
+        <button class="btn" onclick="window.location.href='index4.html'">Lanjut ke Zona 4 →</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona 5 - Museum Banten</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #fef9f0 0%, #f5e8d0 100%);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .zona-header {
+            background: linear-gradient(135deg, #7a4a1f 0%, #4a2a0f 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .zona-header h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .zona-header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .zona-content {
+            padding: 30px;
+        }
+
+        .card {
+            background: #fffaf2;
+            border-radius: 16px;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            border-left: 5px solid #7a4a1f;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h2 {
+            color: #7a4a1f;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card p,
+        .card ul {
+            color: #4a2a0f;
+            line-height: 1.7;
+        }
+
+        .card ul {
+            margin-left: 20px;
+        }
+
+        .card li {
+            margin-bottom: 8px;
+        }
+
+        /* Galeri Grid */
+        .galeri-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .galeri-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .galeri-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .galeri-img {
+            width: 100%;
+            height: 200px;
+            background: #e0d0b8;
+            overflow: hidden;
+        }
+
+        .galeri-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .galeri-item p {
+            padding: 12px;
+            font-weight: bold;
+            color: #7a4a1f;
+        }
+
+        /* Grid 2 kolom untuk informasi */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 15px;
+            border: 1px solid #f0e0c0;
+        }
+
+        .info-card h3 {
+            color: #7a4a1f;
+            margin-bottom: 10px;
+        }
+
+        /* Tombol Navigasi */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 15px;
+        }
+
+        .btn {
+            background: #7a4a1f;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #4a2a0f;
+            transform: translateY(-2px);
+        }
+
+        .btn-back {
+            background: #6c757d;
+        }
+
+        .btn-back:hover {
+            background: #495057;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .zona-header {
+                padding: 20px;
+            }
+
+            .zona-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .zona-content {
+                padding: 20px;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+            }
+
+            .galeri-img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="zona-header">
+            <h1>Zona 5: Peninggalan & Kolonial</h1>
+            <p>Warisan Sejarah dan Akhir Kerajaan Banten</p>
+        </div>
+
+        <div class="zona-content">
+            <!-- Peninggalan Fisik dengan Galeri -->
+            <div class="card">
+                <h2><i>🏛️</i> Peninggalan Fisik</h2>
+                <div class="galeri-grid">
+                    <div class="galeri-item">
+                        <div class="galeri-img">
+                            <img src="../src/MAB2.jpeg" alt="Masjid Agung Banten" onerror="this.src='https://via.placeholder.com/250x200?text=Masjid+Agung+Banten'">
+                        </div>
+                        <p>Masjid Agung Banten</p>
+                    </div>
+                    <div class="galeri-item">
+                        <div class="galeri-img">
+                            <img src="../src/KS.webp" alt="Keraton Surosowan" onerror="this.src='https://via.placeholder.com/250x200?text=Keraton+Surosowan'">
+                        </div>
+                        <p>Keraton Surosowan</p>
+                    </div>
+                    <div class="galeri-item">
+                        <div class="galeri-img">
+                            <img src="../src/benteng_speelwijk.jpg" alt="Benteng Speelwijk" onerror="this.src='https://via.placeholder.com/250x200?text=Benteng+Speelwijk'">
+                        </div>
+                        <p>Benteng Speelwijk</p>
+                    </div>
+                    <div class="galeri-item">
+                        <div class="galeri-img">
+                            <img src="../src/keraton_kaibon.jpg" alt="Keraton Kaibon" onerror="this.src='https://via.placeholder.com/250x200?text=Keraton+Kaibon'">
+                        </div>
+                        <p>Keraton Kaibon</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artefak dengan Galeri -->
+            <div class="card">
+                <h2><i>🏺</i> Artefak Peninggalan</h2>
+                <div class="galeri-grid">
+                    <div class="galeri-item">
+                        <div class="galeri-img">
+                            <img src="../src/koin_kasha.jpg" alt="Koin Kasha" onerror="this.src='https://via.placeholder.com/250x200?text=Koin+Kasha'">
+                        </div>
+                        <p>Koin Emas (Kasha)</p>
+                    </div>
+                    <div class="galeri-item">
+                        <div class="galeri-img">
+                            <img src="../src/koin_picis.jpg" alt="Koin Picis" onerror="this.src='https://via.placeholder.com/250x200?text=Koin+Picis'">
+                        </div>
+                        <p>Koin Timah (Picis)</p>
+                    </div>
+                    <div class="galeri-item">
+                        <div class="galeri-img">
+                            <img src="../src/keramik_banten.jpg" alt="Keramik Banten" onerror="this.src='https://via.placeholder.com/250x200?text=Keramik+Banten'">
+                        </div>
+                        <p>Keramik Asing</p>
+                    </div>
+                    <div class="galeri-item">
+                        <div class="galeri-img">
+                            <img src="../src/senjata_banten.jpg" alt="Senjata Tradisional" onerror="this.src='https://via.placeholder.com/250x200?text=Senjata+Tradisional'">
+                        </div>
+                        <p>Senjata Tradisional</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kebijakan Kolonial VOC -->
+            <div class="card">
+                <h2><i>⚔️</i> Kebijakan Kolonial VOC</h2>
+                <ul>
+                    <li><strong>Monopoli Perdagangan Lada</strong> - VOC memaksa Banten menjual lada hanya kepada mereka dengan harga sepihak</li>
+                    <li><strong>Pengusiran Pedagang Eropa Lain</strong> - Inggris, Denmark, Prancis, Portugis diusir dari Banten</li>
+                    <li><strong>Pembangunan Benteng Speelwijk (1684)</strong> - Untuk memantau aktivitas kesultanan</li>
+                    <li><strong>Intervensi Politik (Devide et Impera)</strong> - Belanda mendukung Sultan Haji melawan Sultan Ageng Tirtayasa</li>
+                    <li><strong>Penguasaan Wilayah Lampung</strong> - Banten kehilangan daerah penghasil lada utama</li>
+                </ul>
+            </div>
+
+            <!-- Perlawanan Rakyat -->
+            <div class="card">
+                <h2><i>🔥</i> Perlawanan Rakyat Banten</h2>
+                <ul>
+                    <li><strong>Sultan Ageng Tirtayasa (1651-1683)</strong> - Perlawanan terorganisir melawan VOC, strategi blokade laut dan aliansi dengan Inglis</li>
+                    <li><strong>Pemberontakan Ratu Bagus Buang & Kyai Tapa (1750-1753)</strong> - Perlawanan kerakyatan terhadap Sultan "boneka" VOC</li>
+                    <li><strong>Geger Cilegon (1888)</strong> - Pemberontakan petani besar yang dipimpin ulama, simbol bangkitnya nasionalisme berbasis agama</li>
+                </ul>
+            </div>
+
+            <!-- Dampak Kolonialisme -->
+            <div class="card">
+                <h2><i>📉</i> Dampak Kolonialisme</h2>
+                <div class="grid-2">
+                    <div class="info-card">
+                        <h3>Politik</h3>
+                        <p>Runtuhnya kedaulatan Kesultanan (1813), dihapus Raffles menjadi wilayah keresidenan.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Ekonomi</h3>
+                        <p>Monopoli lada, kemiskinan sistemik, kerja rodi pembangunan Jalan Raya Pos.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Sosial & Budaya</h3>
+                        <p>Pelabuhan Karangantu mati, masyarakat berubah dari maritim menjadi agraris.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Perlawanan</h3>
+                        <p>Pesantren menjadi pusat konsolidasi anti-penjajah.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fakta Penting -->
+            <div class="card">
+                <h2><i>⭐</i> Fakta Penting</h2>
+                <ul>
+                    <li>Banten resmi dihapus sebagai kesultanan oleh Thomas Stamford Raffles pada 1813</li>
+                    <li>Geger Cilegon 1888 menjadi pemberontakan petani terbesar di abad ke-19</li>
+                    <li>Sultan Ageng Tirtayasa diasingkan Belanda setelah dikhianati putranya sendiri</li>
+                    <li>Benteng Speelwijk masih berdiri hingga kini sebagai saksi bisu kolonialisme</li>
+                </ul>
+            </div>
+
+            <!-- Tombol Navigasi -->
+            <div class="nav-buttons">
+                <button class="btn btn-back" onclick="window.location.href='index4.html'">← Kembali ke Zona 4</button>
+                <button class="btn" onclick="window.location.href='index6.html'">Lanjut ke Zona Interaktif →</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
