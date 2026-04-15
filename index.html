@@ -8,7 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-
+ <div id="lockscreen">
+    <div class="lock-content">
+        <h2>Masukkan Password</h2>
+        <input type="password" id="passInput" placeholder="Password...">
+        <button onclick="checkPass()">Masuk</button>
+        <p id="wrongMsg" style="color: red; display: none;">Password salah</p>
+    </div>
+ </div>
+    
     <!-- ========== DESKTOP NAVBAR ========== -->
     <nav class="navbar-desktop">
         <div class="nav-left">
@@ -112,6 +120,18 @@
         function toggleMobileMenu() {
             document.getElementById('mobileMenu').classList.toggle('active');
         }
+
+    const passwordBenar = "Admin123#"; // ubah sesuai mau kamu
+
+    function checkPass() {
+        let input = document.getElementById("passInput").value;
+
+        if (input === passwordBenar) {
+            document.getElementById("lockscreen").style.display = "none";
+        } else {
+            document.getElementById("wrongMsg").style.display = "block";
+        }
+    }
     </script>
 </body>
 </html>
